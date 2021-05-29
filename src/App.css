@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+/* COLORS */
+
+:root {
+  --primary-white: #fff;
+  --primary-orange: #f9ab00;
+  --primary-dark: #000;
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/**** Navbar ****/
+.navbar {
+  z-index: 2;
+}
+.logo {
+  width: 8.25rem;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/**** MENU LINKS ****/
+nav a .nav-link {
+  font-weight: 500px;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
+}
+
+nav ul li {
+  text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+  color: var(--primary-white);
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  border-bottom: 0.1875rem solid rgba(0, 0, 0, 0);
+}
+
+.navbar-nav > li > a:hover {
+  border-bottom: 0.1875rem solid var(--primary-orange);
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(214, 214, 240, 0.35) !important;
+  border-color: rgba(163, 138, 138, 0.25) !important;
+}
+
+/***** HEADER *****/
+
+.header-wrapper {
+  position: relative;
+  background: url(header-bg-img.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  box-shadow: inset 100vw 0 0 rgb(0 0 0 / 50%);
+}
+
+@media (min-width: 1350px) {
+  .header-wrapper {
+    background-position-y: -430px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.main-info h1 {
+  color: var(--primary-orange);
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/***** Typed Text *****/
+.typed-text {
+  font-size: 2rem;
+  /* color: var(--primary-white); */
+}
+
+@media (max-width: 768px) {
+  .main-info h1 {
+    font-size: 1.7rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .typed-text {
+    font-size: 1.3rem;
+  }
+}
+
+/***** Header main offer button  *****/
+.btn-main-offer {
+  border: 1px solid var(--primary-white);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.625rem 0.75rem 0.75rem;
+  color: var(--primary-dark);
+  margin-top: 2rem;
+  z-index: 1;
+}
+
+.btn-main-offer:hover {
+  background-color: var(--primary-hover-red);
+  transition: 0.2s ease-in-out;
+  color: var(--primary-white);
+  cursor: pointer;
+}
+
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .particles-canvas {
+    display: none;
   }
 }
