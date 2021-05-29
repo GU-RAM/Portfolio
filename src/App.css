@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+/* COLORS */
+
+:root {
+  --primary-white: #fff;
+  --primary-orange: #f9ab00;
+  --primary-dark: #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/**** Navbar ****/
+
+.navbar {
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  width: 8.25rem;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/**** MENU LINKS ****/
+nav a .nav-link {
+  font-weight: 500px;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li {
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-nav > li > a {
+  color: var(--primary-white);
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  border-bottom: 0.1875rem solid rgba(0, 0, 0, 0);
+}
+
+.navbar-nav > li > a:hover {
+  border-bottom: 0.1875rem solid var(--primary-orange);
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(214, 214, 240, 0.35) !important;
+  border-color: rgba(163, 138, 138, 0.25) !important;
 }
