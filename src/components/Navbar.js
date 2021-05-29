@@ -14,7 +14,7 @@ const Navbar = () => {
           <div className='text-light'>GURAM DGEBUADZE</div>
         </a>
         <button
-          className='navbar-toggler bg-light'
+          className='navbar-toggler bg-light align-items-start'
           type='button'
           data-toggle='collapse'
           data-target='#navbarSupportedContent'
